@@ -85,7 +85,8 @@ const Home = ({ posts, loading, getPost }) => {
 
 Home.propTypes = {
     posts: PropTypes.array,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    getPost: PropTypes.func
 }
 
 const mapStateToProps = (state) => ({

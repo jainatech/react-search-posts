@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\sooryen\Documents\react42test\practical\src\client\containers\Posts\EditPosts.test.js">
+    <testCase name="EditPost module case---&gt; EditPost run without crashing" duration="40"/>
+    <testCase name="EditPost module case---&gt; EditPost run without crashing" duration="9"/>
+  </file>
+  <file path="C:\Users\sooryen\Documents\react42test\practical\src\client\containers\Home\index.test.js">
+    <testCase name="HOME module case---&gt; Home match snapshot" duration="22"/>
+    <testCase name="HOME module case---&gt; Home Renders without crashing" duration="24"/>
+    <testCase name="HOME module case---&gt; Home run without crashing" duration="11"/>
+  </file>
+  <file path="C:\Users\sooryen\Documents\react42test\practical\src\client\containers\Routes\index.test.js">
+    <testCase name="Routes module case---&gt; Routes run without crashing" duration="31"/>
+    <testCase name="Routes module case---&gt; Routes run without crashing" duration="10"/>
+    <testCase name="Routes module case---&gt; Routes run without crashing" duration="6"/>
+  </file>
+  <file path="C:\Users\sooryen\Documents\react42test\practical\src\index.test.js">
+    <testCase name="Main Application Main running without error" duration="564"/>
+  </file>
+</testExecutions>

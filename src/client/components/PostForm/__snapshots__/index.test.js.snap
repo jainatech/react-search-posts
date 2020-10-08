@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostForm module case---> PostForm match snapshot 1`] = `
+<PostForm
+  editItem={
+    Object {
+      "body": "body1",
+      "id": 1,
+      "title": "title1",
+      "userId": 1,
+    }
+  }
+>
+  <Formik
+    enableReinitialize={true}
+    initialValues={
+      Object {
+        "body": "body1",
+        "title": "title1",
+      }
+    }
+    onSubmit={[Function]}
+    validationSchema={
+      ObjectSchema {
+        "_blacklist": RefSet {
+          "list": Set {},
+          "refs": Map {},
+        },
+        "_conditions": Array [],
+        "_defaultDefault": [Function],
+        "_deps": Array [],
+        "_excludedEdges": Array [],
+        "_exclusive": Object {},
+        "_mutate": undefined,
+        "_nodes": Array [
+          "body",
+          "title",
+        ],
+        "_options": Object {
+          "abortEarly": true,
+          "recursive": true,
+        },
+        "_type": "object",
+        "_typeError": [Function],
+        "_whitelist": RefSet {
+          "list": Set {},
+          "refs": Map {},
+        },
+        "fields": Object {
+          "body": StringSchema {
+            "_blacklist": RefSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_conditions": Array [],
+            "_deps": Array [],
+            "_exclusive": Object {
+              "required": true,
+            },
+            "_mutate": undefined,
+            "_options": Object {
+              "abortEarly": true,
+              "recursive": true,
+            },
+            "_type": "string",
+            "_typeError": [Function],
+            "_whitelist": RefSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "tests": Array [
+              [Function],
+            ],
+            "transforms": Array [
+              [Function],
+            ],
+            "type": "string",
+          },
+          "title": StringSchema {
+            "_blacklist": RefSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_conditions": Array [],
+            "_deps": Array [],
+            "_exclusive": Object {
+              "required": true,
+            },
+            "_mutate": undefined,
+            "_options": Object {
+              "abortEarly": true,
+              "recursive": true,
+            },
+            "_type": "string",
+            "_typeError": [Function],
+            "_whitelist": RefSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "tests": Array [
+              [Function],
+            ],
+            "transforms": Array [
+              [Function],
+            ],
+            "type": "string",
+          },
+        },
+        "tests": Array [],
+        "transforms": Array [
+          [Function],
+        ],
+        "type": "object",
+      }
+    }
+  >
+    <Form>
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-row"
+        >
+          <div
+            className="form-group col-11"
+          >
+            <label
+              htmlFor="title"
+            >
+              Title : 
+            </label>
+            <Field
+              className="form-control"
+              name="title"
+              type="text"
+            >
+              <input
+                className="form-control"
+                name="title"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="text"
+                value="title1"
+              />
+            </Field>
+            <FormikConnect(ErrorMessageImpl)
+              className="invalid-feedback"
+              component="div"
+              name="title"
+            >
+              <ErrorMessageImpl
+                className="invalid-feedback"
+                component="div"
+                formik={
+                  Object {
+                    "dirty": false,
+                    "errors": Object {},
+                    "getFieldHelpers": [Function],
+                    "getFieldMeta": [Function],
+                    "getFieldProps": [Function],
+                    "handleBlur": [Function],
+                    "handleChange": [Function],
+                    "handleReset": [Function],
+                    "handleSubmit": [Function],
+                    "initialErrors": Object {},
+                    "initialStatus": undefined,
+                    "initialTouched": Object {},
+                    "initialValues": Object {
+                      "body": "body1",
+                      "title": "title1",
+                    },
+                    "isSubmitting": false,
+                    "isValid": true,
+                    "isValidating": false,
+                    "registerField": [Function],
+                    "resetForm": [Function],
+                    "setErrors": [Function],
+                    "setFieldError": [Function],
+                    "setFieldTouched": [Function],
+                    "setFieldValue": [Function],
+                    "setFormikState": [Function],
+                    "setStatus": [Function],
+                    "setSubmitting": [Function],
+                    "setTouched": [Function],
+                    "setValues": [Function],
+                    "status": undefined,
+                    "submitCount": 0,
+                    "submitForm": [Function],
+                    "touched": Object {},
+                    "unregisterField": [Function],
+                    "validateField": [Function],
+                    "validateForm": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validateOnMount": false,
+                    "values": Object {
+                      "body": "body1",
+                      "title": "title1",
+                    },
+                  }
+                }
+                name="title"
+              />
+            </FormikConnect(ErrorMessageImpl)>
+          </div>
+          <div
+            className="form-group col-11"
+          >
+            <label
+              htmlFor="body"
+            >
+              Body : 
+            </label>
+            <Field
+              className="form-control"
+              name="body"
+              type="text"
+            >
+              <input
+                className="form-control"
+                name="body"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="text"
+                value="body1"
+              />
+            </Field>
+            <FormikConnect(ErrorMessageImpl)
+              className="invalid-feedback"
+              component="div"
+              name="body"
+            >
+              <ErrorMessageImpl
+                className="invalid-feedback"
+                component="div"
+                formik={
+                  Object {
+                    "dirty": false,
+                    "errors": Object {},
+                    "getFieldHelpers": [Function],
+                    "getFieldMeta": [Function],
+                    "getFieldProps": [Function],
+                    "handleBlur": [Function],
+                    "handleChange": [Function],
+                    "handleReset": [Function],
+                    "handleSubmit": [Function],
+                    "initialErrors": Object {},
+                    "initialStatus": undefined,
+                    "initialTouched": Object {},
+                    "initialValues": Object {
+                      "body": "body1",
+                      "title": "title1",
+                    },
+                    "isSubmitting": false,
+                    "isValid": true,
+                    "isValidating": false,
+                    "registerField": [Function],
+                    "resetForm": [Function],
+                    "setErrors": [Function],
+                    "setFieldError": [Function],
+                    "setFieldTouched": [Function],
+                    "setFieldValue": [Function],
+                    "setFormikState": [Function],
+                    "setStatus": [Function],
+                    "setSubmitting": [Function],
+                    "setTouched": [Function],
+                    "setValues": [Function],
+                    "status": undefined,
+                    "submitCount": 0,
+                    "submitForm": [Function],
+                    "touched": Object {},
+                    "unregisterField": [Function],
+                    "validateField": [Function],
+                    "validateForm": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validateOnMount": false,
+                    "values": Object {
+                      "body": "body1",
+                      "title": "title1",
+                    },
+                  }
+                }
+                name="body"
+              />
+            </FormikConnect(ErrorMessageImpl)>
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <Button
+            active={false}
+            className="btn btn-primary mr-2"
+            disabled={false}
+            type="submit"
+            variant="primary"
+          >
+            <button
+              className="btn btn-primary mr-2 btn btn-primary"
+              disabled={false}
+              type="submit"
+            >
+              Save
+            </button>
+          </Button>
+        </div>
+      </form>
+    </Form>
+  </Formik>
+</PostForm>
+`;

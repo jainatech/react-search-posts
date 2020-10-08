@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HOME module case---> Home match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Home)
+    loading={true}
+    posts={
+      Array [
+        Object {
+          "body": "body1",
+          "id": 1,
+          "title": "title1",
+          "userId": 1,
+        },
+        Object {
+          "body": "body2",
+          "id": 2,
+          "title": "title2",
+          "userId": 1,
+        },
+      ]
+    }
+  >
+    <Home
+      getPost={[Function]}
+      loading={true}
+      posts={
+        Array [
+          Object {
+            "body": "body1",
+            "id": 1,
+            "title": "title1",
+            "userId": 1,
+          },
+          Object {
+            "body": "body2",
+            "id": 2,
+            "title": "title2",
+            "userId": 1,
+          },
+        ]
+      }
+    >
+      <Header
+        filterData={[Function]}
+        search={true}
+        text="Posts Search App"
+      >
+        <Navbar
+          bg="light"
+          className="bg-light justify-content-between"
+          collapseOnSelect={false}
+          expand="lg"
+          variant="light"
+        >
+          <nav
+            className="bg-light justify-content-between navbar navbar-expand-lg navbar-light bg-light"
+          >
+            <NavbarBrand>
+              <span
+                className="navbar-brand"
+              >
+                Posts Search App
+              </span>
+            </NavbarBrand>
+            <Form
+              inline={true}
+            >
+              <form
+                className="form-inline"
+              >
+                <FormControl
+                  className=" mr-sm-2"
+                  onChange={[Function]}
+                  placeholder="Search by title "
+                  type="text"
+                >
+                  <input
+                    className=" mr-sm-2 form-control"
+                    onChange={[Function]}
+                    placeholder="Search by title "
+                    type="text"
+                  />
+                </FormControl>
+              </form>
+            </Form>
+          </nav>
+        </Navbar>
+      </Header>
+      <Container
+        fluid="lg"
+      >
+        <div
+          className="container-lg"
+        >
+          <Row
+            noGutters={false}
+          >
+            <div
+              className="row"
+            >
+              <Col>
+                <div
+                  className="col"
+                >
+                  <Container
+                    fluid={false}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <Row
+                        noGutters={false}
+                      >
+                        <div
+                          className="row"
+                        >
+                          <Col>
+                            <div
+                              className="col"
+                            >
+                              <h4
+                                className="text-center"
+                              >
+                                Loading...
+                              </h4>
+                            </div>
+                          </Col>
+                        </div>
+                      </Row>
+                      <Row
+                        noGutters={false}
+                      >
+                        <div
+                          className="row"
+                        >
+                          <ForwardRef>
+                            <ul
+                              className="pagination"
+                            >
+                              <PageItem
+                                active={true}
+                                activeLabel="(current)"
+                                disabled={false}
+                                key="1"
+                                onClick={[Function]}
+                              >
+                                <li
+                                  className="page-item active"
+                                >
+                                  <span
+                                    className="page-link"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                  >
+                                    1
+                                    <span
+                                      className="sr-only"
+                                    >
+                                      (current)
+                                    </span>
+                                  </span>
+                                </li>
+                              </PageItem>
+                            </ul>
+                          </ForwardRef>
+                        </div>
+                      </Row>
+                    </div>
+                  </Container>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
+      </Container>
+    </Home>
+  </Connect(Home)>
+</Provider>
+`;

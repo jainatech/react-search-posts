@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header module case---> Header match snapshot 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Header
+      search={true}
+      text="Hello"
+    >
+      <Navbar
+        bg="light"
+        className="bg-light justify-content-between"
+        collapseOnSelect={false}
+        expand="lg"
+        variant="light"
+      >
+        <nav
+          className="bg-light justify-content-between navbar navbar-expand-lg navbar-light bg-light"
+        >
+          <NavbarBrand>
+            <span
+              className="navbar-brand"
+            >
+              Hello
+            </span>
+          </NavbarBrand>
+          <Form
+            inline={true}
+          >
+            <form
+              className="form-inline"
+            >
+              <FormControl
+                className=" mr-sm-2"
+                onChange={[Function]}
+                placeholder="Search by title "
+                type="text"
+              >
+                <input
+                  className=" mr-sm-2 form-control"
+                  onChange={[Function]}
+                  placeholder="Search by title "
+                  type="text"
+                />
+              </FormControl>
+            </form>
+          </Form>
+        </nav>
+      </Navbar>
+    </Header>
+  </Router>
+</BrowserRouter>
+`;

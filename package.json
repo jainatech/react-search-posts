@@ -14,10 +14,9 @@
     "chai-http": "^4.3.0",
     "concurrently": "^5.3.0",
     "cors": "^2.8.5",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
     "express": "^4.17.1",
     "formik": "^2.1.7",
+    "jest-sonar-reporter": "^2.0.0",
     "mocha": "^8.1.3",
     "nock": "^13.0.4",
     "react": "^16.13.1",
@@ -36,12 +35,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "api": "node ./src/server",
     "api:test": "mocha ./src/server/test",
     "dev": "concurrently --kill-others \"npm run api\" \"npm run start\"",
-    "dev:test": "concurrently --kill-others \"npm run api:test\" \"npm run test\""
+    "dev:test": "concurrently --kill-others \"npm run api:test\" \"npm run test\"",
+    "test": "jest --verbose --coverage",
+    "test:update": "jest --verbose --coverage --updateSnapshot",
+    "test:watch": "jest --verbose --watch",
+    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -57,5 +59,53 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/client/**/*.js",
+      "!src/index.js"
+    ],
+    "coverageReporters": [
+      "lcov"
+    ],
+    "testResultsProcessor": "jest-sonar-reporter",
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testRegex": "/*.test.js$",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "<rootDir>/src/client/serviceWorker.js",
+      "<rootDir>/src/client/utils/mocks/MockData.js"
+  ],
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "jestSonar": {
+    "reportPath": "coverage",
+    "reportFile": "jest-sonar-reporter.xml",
+    "indent": 4
   }
 }
