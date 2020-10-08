@@ -3,10 +3,8 @@
 
 ![Alt text](preview_1.png?raw=true "Application Review")
 
-
 ## Test Coverage 
 ![Alt text](coverage.png?raw=true "Test Coverage Report")
-
 
 ## Available Scripts
 
@@ -34,12 +32,12 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Component test by jest and enzyme 
+![Alt text](testpreview.png?raw=true "React Component test")
 
 ### `npm run api:test`
 API test by mocha, chai, nock 
-![Alt text](api-test-result.png?raw=true "API test")
+![Alt text](testpreview_1.png?raw=true "API test")
 
 ### `npm run build`
 
