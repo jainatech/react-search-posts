@@ -20,7 +20,7 @@ function ListItem({ item, index, type }) {
                 </tr>
             )
         default:
-            return <p>List item</p>
+            return <tr><p>List item</p></tr>;
     }
 
 

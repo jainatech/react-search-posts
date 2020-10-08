@@ -41,61 +41,63 @@ exports[`List module case---> List match snapshot 1`] = `
         <table
           className="table"
         >
-          <ListItem
-            index={0}
-            item={
-              Object {
-                "body": "body1",
-                "id": 1,
-                "title": "title1",
-                "userId": 1,
+          <tbody>
+            <ListItem
+              index={0}
+              item={
+                Object {
+                  "body": "body1",
+                  "id": 1,
+                  "title": "title1",
+                  "userId": 1,
+                }
               }
-            }
-            key="post-1"
-            type="home_posts_list"
-          >
-            <tr>
-              <td>
-                <span>
-                  1
-                  .
-                </span>
-                 
-                <span />
-                title1
-              </td>
-              <td>
-                <Link
-                  to="/edit/1"
-                >
-                  <LinkAnchor
-                    href="/edit/1"
-                    navigate={[Function]}
+              key="post-1"
+              type="home_posts_list"
+            >
+              <tr>
+                <td>
+                  <span>
+                    1
+                    .
+                  </span>
+                   
+                  <span />
+                  title1
+                </td>
+                <td>
+                  <Link
+                    to="/edit/1"
                   >
-                    <a
+                    <LinkAnchor
                       href="/edit/1"
-                      onClick={[Function]}
+                      navigate={[Function]}
                     >
-                      <Button
-                        active={false}
-                        className="ml-2"
-                        disabled={false}
-                        variant="primary"
+                      <a
+                        href="/edit/1"
+                        onClick={[Function]}
                       >
-                        <button
-                          className="ml-2 btn btn-primary"
+                        <Button
+                          active={false}
+                          className="ml-2"
                           disabled={false}
-                          type="button"
+                          variant="primary"
                         >
-                          Edit
-                        </button>
-                      </Button>
-                    </a>
-                  </LinkAnchor>
-                </Link>
-              </td>
-            </tr>
-          </ListItem>
+                          <button
+                            className="ml-2 btn btn-primary"
+                            disabled={false}
+                            type="button"
+                          >
+                            Edit
+                          </button>
+                        </Button>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
+                </td>
+              </tr>
+            </ListItem>
+          </tbody>
         </table>
       </ForwardRef>
     </List>

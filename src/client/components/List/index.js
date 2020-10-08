@@ -8,11 +8,13 @@ const List = ({ data, type }) => {
         case "home_posts_list":
             return (
                 <Table>
-                    { data && data.length ?
-                        data.map((post, index) => {
-                            return <ListItem key={`post-${post.id}`} item={post} index={index} type="home_posts_list" />;
-                        }) : ''
-                    }
+                    <tbody>
+                        {data && data.length ?
+                            data.map((post, index) => {
+                                return <ListItem key={`post-${post.id}`} item={post} index={index} type="home_posts_list" />;
+                            }) : ''
+                        }
+                    </tbody>
                 </Table>
             );
         default:

@@ -88,7 +88,7 @@
       "node_modules",
       "<rootDir>/src/client/serviceWorker.js",
       "<rootDir>/src/client/utils/mocks/MockData.js"
-  ],
+    ],
     "coverageDirectory": "coverage",
     "coverageThreshold": {
       "global": {
