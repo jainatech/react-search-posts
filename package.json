@@ -38,12 +38,10 @@
     "eject": "react-scripts eject",
     "api": "node ./src/server",
     "api:test": "mocha ./src/server/test",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen --coverage",
+    "test:watch": "react-scripts test --env=jest-environment-jsdom-sixteen --watchAll --coverage",
     "dev": "concurrently --kill-others \"npm run api\" \"npm run start\"",
-    "dev:test": "concurrently --kill-others \"npm run api:test\" \"npm run test\"",
-    "test": "jest --verbose --coverage",
-    "test:update": "jest --verbose --coverage --updateSnapshot",
-    "test:watch": "jest --verbose --watch",
-    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
+    "dev:test": "concurrently --kill-others \"npm run api:test\" \"npm run test\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -65,7 +63,8 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "enzyme-to-json": "^3.6.1"
+    "enzyme-to-json": "^3.6.1",
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   },
   "jest": {
     "snapshotSerializers": [
@@ -73,34 +72,12 @@
     ],
     "collectCoverageFrom": [
       "src/client/**/*.js",
-      "!src/index.js"
+      "!src/index.js",
+      "!src/client/serviceWorker.js",
+      "!src/client"
     ],
     "coverageReporters": [
       "lcov"
-    ],
-    "testResultsProcessor": "jest-sonar-reporter",
-    "setupFiles": [
-      "<rootDir>/src/setupTests.js"
-    ],
-    "testRegex": "/*.test.js$",
-    "collectCoverage": true,
-    "coveragePathIgnorePatterns": [
-      "node_modules",
-      "<rootDir>/src/client/serviceWorker.js",
-      "<rootDir>/src/client/utils/mocks/MockData.js"
-    ],
-    "coverageDirectory": "coverage",
-    "coverageThreshold": {
-      "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
-      }
-    },
-    "moduleDirectories": [
-      "node_modules",
-      "src"
     ]
   },
   "jestSonar": {

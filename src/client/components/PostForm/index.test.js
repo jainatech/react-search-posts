@@ -1,19 +1,25 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { render } from "@testing-library/react";
+
+import { BrowserRouter as Router } from 'react-router-dom';
 import PostForm from './index';
-
-
+import TestProvider from "../../utils/mocks/TestPovider";
 const createTestProps = (props) => ({
+  type : 'home_posts_list',
   ...props
 })
-
-describe('PostForm module case--->', () => {
-  it('PostForm match snapshot', () => {
+describe("PostForm component test suite", () => {
+  it('it should render successfully', () => {
     let props = createTestProps({
-        editItem : { "userId": 1, "id": 1, "title": "title1", "body": "body1" }
+      editItem : { "userId": 1, "id": 1, "title": "title1", "body": "body1" }
     })
-    let wrapper = mount(<PostForm {...props}></PostForm>);
-    expect(wrapper).toMatchSnapshot();
-    wrapper.unmount();
+    const comp = render(
+      <TestProvider>
+        <Router>
+        <PostForm {...props}/>
+        </Router>
+      </TestProvider>
+    );
+    expect(comp.container).toBeTruthy();
   });
 });

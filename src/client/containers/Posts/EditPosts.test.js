@@ -1,18 +1,9 @@
-import React from 'react';
-import { shallow, mount } from 'enzyme';
-import configureStore from 'redux-mock-store';
-import { Provider } from 'react-redux';
-import EditPost from './EditPost';
-import PostForm from '../../components/PostForm';
-import Header from '../../components/Header';
+import React from "react";
+import { render } from "@testing-library/react";
 
-const mockStore = configureStore();
-const userStore = mockStore({
-  postsReducer: {
-    posts_data: [{ "userId": 1, "id": 1, "title": "title1", "body": "body1" }, { "userId": 1, "id": 2, "title": "title2", "body": "body2" }],
-    loading: true
-  }
-});
+import { BrowserRouter as Router } from 'react-router-dom';
+import EditPosts from './EditPost';
+import TestProvider from "../../utils/mocks/TestPovider";
 const createTestProps = (props) => ({
   match : {
     params : {
@@ -21,26 +12,19 @@ const createTestProps = (props) => ({
   },
   ...props
 })
-
-describe('EditPost module case--->', () => {
-  it('EditPost match snapshot', () => {
+describe("EditPosts component test suite", () => {
+  it('it should render successfully', () => {
     let props = createTestProps({
       posts: [{ "userId": 1, "id": 1, "title": "title1", "body": "body1" }, { "userId": 1, "id": 2, "title": "title2", "body": "body2" }],
       loading: true
-    })
-    let wrapper = mount(<Provider store={userStore}><EditPost {...props}></EditPost></Provider>);
-    expect(wrapper).toMatchSnapshot();
-    wrapper.unmount();
+    });
+    const comp = render(
+      <TestProvider>
+        <Router>
+        <EditPosts {...props}/>
+        </Router>
+      </TestProvider>
+    );
+    expect(comp.container).toBeTruthy();
   });
-
-  it('EditPost run without crashing', () => {
-    const component = shallow(<Provider store={userStore}><EditPost /></Provider>);
-    expect(component.find(EditPost)).toBeDefined();
-  });
-
-  it('EditPost run without crashing', () => {
-    const component = shallow(<Provider store={userStore}><EditPost ><Header/><PostForm/></EditPost></Provider>);
-    expect(component.find(EditPost)).toBeDefined();
-  });
-
 });

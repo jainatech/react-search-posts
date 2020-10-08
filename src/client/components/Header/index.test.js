@@ -1,20 +1,17 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { render } from "@testing-library/react";
+
 import Header from './index';
-import { BrowserRouter as Router } from 'react-router-dom';
+import TestProvider from "../../utils/mocks/TestPovider";
 
-const createTestProps = (props) => ({
-  ...props
-})
+describe("Header component test suite", () => {  
 
-describe('Header module case--->', () => {
-  it('Header match snapshot', () => {
-    let props = createTestProps({
-        text: 'Hello',
-        search: true
-    })
-    let wrapper = mount(<Router><Header {...props}></Header></Router>);
-    expect(wrapper).toMatchSnapshot();
-    wrapper.unmount();
+  it('it should render successfully', () => {
+    const comp = render(
+      <TestProvider>
+        <Header />
+      </TestProvider>
+    );
+    expect(comp.container).toBeTruthy();
   });
 });
