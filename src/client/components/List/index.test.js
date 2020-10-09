@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import List from './index';
-import TestProvider from "../../utils/mocks/TestPovider";
+import MockProvider from "../../utils/mocks/MockProvider";
 const createTestProps = (props) => ({
   type: 'home_posts_list',
   ...props
@@ -14,11 +14,11 @@ describe("List component test suite", () => {
       data: [{ "userId": 1, "id": 1, "title": "title1", "body": "body1" }]
     })
     const comp = render(
-      <TestProvider>
+      <MockProvider>
         <Router>
         <List {...props}/>
         </Router>
-      </TestProvider>
+      </MockProvider>
     );
     expect(comp.container).toBeTruthy();
   });
@@ -27,11 +27,11 @@ describe("List component test suite", () => {
       data: [{ "userId": 1, "id": 1, "title": "title1", "body": "body1" }]
     }
     const comp = render(
-      <TestProvider>
+      <MockProvider>
         <Router>
         <List {...props}/>
         </Router>
-      </TestProvider>
+      </MockProvider>
     );
     expect(comp.container).toBeTruthy();
   });

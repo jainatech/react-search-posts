@@ -1,21 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Table } from 'react-bootstrap';
 import ListItem from "../ListItem";
+import {  Row } from 'react-bootstrap';
 
 const List = ({ data, type }) => {
     switch (type) {
         case "home_posts_list":
             return (
-                <Table>
-                    <tbody>
-                        {data && data.length ?
-                            data.map((post, index) => {
-                                return <ListItem key={`post-${post.id}`} item={post} index={index} type="home_posts_list" />;
-                            }) : ''
-                        }
-                    </tbody>
-                </Table>
+                <>
+                    <div>
+                        <Row>
+
+                            {data && data.length ?
+                                data.map((post, index) => {
+                                    return <ListItem key={`post-${post.id}`} item={post} index={index} type="home_posts_list" />;
+                                }) : null
+                            }
+                        </Row>
+                    </div>
+                </>
             );
         default:
             return (<p>List</p>)

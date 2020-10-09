@@ -8,12 +8,15 @@ import { createBrowserHistory } from "history";
 import AppRoutes from '../src/client/containers/Routes'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import 'react-notifications/lib/notifications.css'
+import { NotificationContainer } from 'react-notifications'
 
 
 const browserHistory = createBrowserHistory();
 
 const App = (
   <Provider store={store}>
+    <NotificationContainer/>
     <Router history={browserHistory}>
       <AppRoutes />
     </Router>

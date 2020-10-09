@@ -2,25 +2,31 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ENUMS from "../../utils/ENUMS";
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import "./index.css";
+import { Button, Col, Card } from 'react-bootstrap';
 
 function ListItem({ item, index, type }) {
     switch (type) {
         case "home_posts_list":
             return (
-                <tr>
-                    <td>
-                        <span>{item.id}.</span> <span></span>{item.title}
-                    </td>
-                    <td>
-                        <Link to={`${ENUMS.ROUTES.EDIT_POSTS}/${item.id}`}>
-                            <Button className="ml-2">Edit</Button>
-                        </Link> 
-                    </td>
-                </tr>
+                <>
+                    <Col sm={6}>
+                        <Card style={{ margin: '10px' }}>
+                            <Card.Body>
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>
+                                    {item.body}
+                                </Card.Text>
+                                <Link to={`${ENUMS.ROUTES.EDIT_POSTS}/${item.id}`}>
+                                    <Card.Text>Edit</Card.Text>
+                                </Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </>
             )
         default:
-            return <tr><p>List item</p></tr>;
+            return <p>List item</p>
     }
 
 

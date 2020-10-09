@@ -17,7 +17,7 @@ function Header(props) {
                 <Navbar.Brand>{props.text}</Navbar.Brand>
                 {props.search ?
                     <Form inline>
-                        <FormControl ref={searchRef} type="text" placeholder="Search by title " className=" mr-sm-2" onChange={doSearch} />
+                        <FormControl ref={searchRef} type="text" placeholder="Search by title" className=" mr-sm-2" onChange={doSearch} />
                     </Form> : null}
 
             </Navbar>

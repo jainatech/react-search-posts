@@ -3,10 +3,10 @@ import { render } from "@testing-library/react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import EditPosts from './EditPost';
-import TestProvider from "../../utils/mocks/TestPovider";
+import MockProvider from "../../utils/mocks/MockProvider";
 const createTestProps = (props) => ({
-  match : {
-    params : {
+  match: {
+    params: {
       id: 1
     }
   },
@@ -19,12 +19,13 @@ describe("EditPosts component test suite", () => {
       loading: true
     });
     const comp = render(
-      <TestProvider>
+      <MockProvider>
         <Router>
-        <EditPosts {...props}/>
+          <EditPosts {...props} />
         </Router>
-      </TestProvider>
+       </MockProvider>
     );
     expect(comp.container).toBeTruthy();
   });
 });
+

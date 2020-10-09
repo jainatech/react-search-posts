@@ -3,17 +3,17 @@ import { render } from "@testing-library/react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './index';
-import TestProvider from "../../utils/mocks/TestPovider";
+import MockProvider from "../../utils/mocks/MockProvider";
 
 describe("Routes component test suite", () => {
   it('it should render successfully', () => {
 
     const comp = render(
-      <TestProvider>
+      <MockProvider>
         <Router>
           <Routes />
-        </Router>
-      </TestProvider>
+      </Router>
+      </MockProvider>
     );
     expect(comp.container).toBeTruthy();
   });

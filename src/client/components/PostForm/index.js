@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
+import { NotificationManager  } from 'react-notifications';
 
 const PostForm = (props) => {
   const {editItem,editPost} = props;
@@ -20,7 +21,8 @@ const PostForm = (props) => {
               .required('Body is required'),
       })}
       onSubmit={fields => {
-          alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4));
+         NotificationManager.success('Posts updated successfully','SUCCESS',3000)
+          // alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4));
           const updatedData = { ...editItem, title: fields.title, body: fields.body }
           editPost(updatedData);
       }}

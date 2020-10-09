@@ -15,6 +15,7 @@ const Home = ({ posts, loading, getPost }) => {
     const [limit, setLimit] = useState(10);
 
     useEffect(() => {
+        console.log("POST",posts)
         if (posts && posts.length === 0) {
             getPost();
         }
@@ -48,7 +49,8 @@ const Home = ({ posts, loading, getPost }) => {
             }
             const indexOfLast = active * limit;
             const indexOfFirst = indexOfLast - limit;
-            render = render.slice(indexOfFirst, indexOfLast);
+            console.log(render);
+            render = render && render.length > 0 ? render.slice(indexOfFirst, indexOfLast) : [];
             return <List data={render} type="home_posts_list" />
         }
 
