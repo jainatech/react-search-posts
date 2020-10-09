@@ -1,7 +1,7 @@
 import React from "react";
-import { fireEvent, getByPlaceholderText, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import '@testing-library/jest-dom'
-import Header from './index';
+import Header from './Header';
 import MockProvider from "../../utils/mocks/MockProvider";
 import userEvent from "@testing-library/user-event";
 

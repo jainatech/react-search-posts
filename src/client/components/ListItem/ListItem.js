@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ENUMS from "../../utils/ENUMS";
 import { Link } from 'react-router-dom';
-import "./index.css";
+import "./ListItem.css";
 import { Col, Card } from 'react-bootstrap';
 
 function ListItem({ item, index, type }) {

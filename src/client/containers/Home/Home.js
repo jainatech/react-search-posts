@@ -3,9 +3,9 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Container, Row, Col, Pagination } from 'react-bootstrap';
-import List from '../../components/List';
+import List from '../../components/List/List.js';
 import { getPost } from '../../store/actions/posts';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header.js';
 
 
 const Home = ({ posts, loading, getPost }) => {

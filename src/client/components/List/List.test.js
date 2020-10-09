@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import List from './index';
+import List from './List';
 import MockProvider from "../../utils/mocks/MockProvider";
 const createTestProps = (props) => ({
   type: 'home_posts_list',

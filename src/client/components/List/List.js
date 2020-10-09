@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ListItem from "../ListItem";
+import ListItem from "../ListItem/ListItem";
 import {  Row } from 'react-bootstrap';
 
 const List = ({ data, type }) => {

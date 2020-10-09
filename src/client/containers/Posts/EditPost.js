@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { Container, Col, Row } from 'react-bootstrap';
 import { getPost, editPost } from "../../store/actions/posts";
 import ENUMS from '../../utils/ENUMS';
-import PostForm from '../../components/PostForm';
-import Header from '../../components/Header';
+import PostForm from '../../components/PostForm/PostForm.js';
+import Header from '../../components/Header/Header.js';
 
 const EditPost = (props) => {
     const id = props && props.match && props.match.params && props.match.params.id;

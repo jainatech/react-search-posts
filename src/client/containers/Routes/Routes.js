@@ -7,7 +7,7 @@ import {
 import ENUMS from '../../utils/ENUMS'
 
 const EditPost = lazy(() => import('../Posts/EditPost'));
-const Home = lazy(() => import('../Home'));
+const Home = lazy(() => import('../Home/Home'));
 
 function AppRoutes() {
     return (
