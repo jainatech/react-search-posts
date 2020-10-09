@@ -35,7 +35,7 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 React Component test by jest, react testing library 
-![Alt text](testpreview.png?raw=true "React Component test")
+![Alt text](testpreview_2.png?raw=true "React Component test")
 
 ### `npm run api:test`
 API test by mocha, chai, nock 
