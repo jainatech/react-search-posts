@@ -37,7 +37,7 @@
     "eject": "react-scripts eject",
     "api": "node ./src/server",
     "api:test": "mocha ./src/server/test",
-    "test": "react-scripts test --env=jest-environment-jsdom-sixteen --coverage",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen --watchAll --coverage",
     "test:watch": "react-scripts test --env=jest-environment-jsdom-sixteen --watchAll --coverage",
     "dev": "concurrently --kill-others \"npm run api\" \"npm run start\"",
     "dev:test": "concurrently --kill-others \"npm run api:test\" \"npm run test\""
@@ -71,9 +71,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/client/**/*.js",
+      "!src/index.js",
       "!src/client/serviceWorker.js",
-      "!src/client",
-      "src"
+      "!src/client"
     ],
     "coverageReporters": [
       "lcov"

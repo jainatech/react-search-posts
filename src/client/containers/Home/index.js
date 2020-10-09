@@ -12,7 +12,7 @@ const Home = ({ posts, loading, getPost }) => {
 
     const [postsData, setPostsData] = useState(undefined);
     const [active, setActive] = useState(1);
-    const [limit, setLimit] = useState(10);
+    const limit = 10;
 
     useEffect(() => {
         console.log("POST",posts)

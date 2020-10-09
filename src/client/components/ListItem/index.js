@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ENUMS from "../../utils/ENUMS";
 import { Link } from 'react-router-dom';
 import "./index.css";
-import { Button, Col, Card } from 'react-bootstrap';
+import { Col, Card } from 'react-bootstrap';
 
 function ListItem({ item, index, type }) {
     switch (type) {
